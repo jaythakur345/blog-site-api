@@ -11,12 +11,12 @@ const userRouter = require('./routes/userRouter')
 const postRouter = require('./routes/postRouter')
 const catRouter = require('./routes/catagoriesRouter')
 
-const port = 9000;
-
 app.use(express.json());
 app.use(cors());
 
 dotenv.config();
+
+const port = process.env.PORT || 9000;
 
 // MULTER FOR IMAGE UPLOAD
 const storage = multer.diskStorage({
